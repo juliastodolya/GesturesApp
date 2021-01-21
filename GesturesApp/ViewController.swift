@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet var gestureView: GestureView! {
+        didSet{
+            let recognizer = UITapGestureRecognizer(target: gestureView, action: #selector(GestureView.didTap))
+            recognizer.numberOfTapsRequired = 2
+            gestureView.addGestureRecognizer(recognizer)
+            
+            gestureView.delegate = self
+        }
     }
-
-
 }
+
+extension ViewController: GestureDelegate {
+    
+    func didTap(_ view: GestureView) {
+        print("delegate didTap")
+    }
+}
+
 
