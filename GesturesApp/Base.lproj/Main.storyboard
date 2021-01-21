@@ -17,15 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-nU-rgw" customClass="GestureView" customModule="GesturesApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-nU-rgw" customClass="GestureView" customModule="GesturesApp" customModuleProvider="target">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="XzI-8O-cqg"/>
+                                    <constraint firstAttribute="width" constant="240" id="hod-SJ-atm"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ge4-nU-rgw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o8c-dk-gvc"/>
+                            <constraint firstItem="Ge4-nU-rgw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ppy-7O-29G"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="gestureView" destination="Ge4-nU-rgw" id="0zP-zg-IFz"/>

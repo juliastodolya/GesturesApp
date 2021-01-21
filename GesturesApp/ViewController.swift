@@ -11,10 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var gestureView: GestureView! {
         didSet{
-            let recognizer = UITapGestureRecognizer(target: gestureView, action: #selector(GestureView.didTap))
-            recognizer.numberOfTapsRequired = 2
-            gestureView.addGestureRecognizer(recognizer)
-            
             gestureView.delegate = self
         }
     }
